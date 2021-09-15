@@ -1,0 +1,117 @@
+/***————————————————————————————————————————————————
+Fonts
+————————————————————————————————————————————————***/
+
+/***
+Font weight name mappings:
+
+100 - Thin, Hairline
+200 - Extra Light, Ultra Light
+300 - Light
+400 - Normal, Regular
+500 - Medium
+600 - Semi Bold, Demi Bold
+700 - Bold
+800 - Extra Bold, Ultra Bold
+900 - Black, Heavy
+***/
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-regular-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/roboto-regularitalic-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-bold-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2");
+}
+
+/***————————————————————————————————————————————————
+Global Styles
+————————————————————————————————————————————————***/
+
+/*** User variables ***/
+:root {
+	--body-font: 400 16px / 1.5 'Roboto', sans-serif;
+	--body-color: #333;
+	--body-bg: #fff;
+	--primary: #b04632;
+	--secondary: #ff9f1a;
+	--accent: #0079bf;
+	--primary-rgba: 176, 70, 50;
+	--secondary-rgba: 255, 159, 26;
+	--accent-rgba: 0, 121, 191;
+	--s-padd: 50px 0;
+}
+
+/*** Basic Settings ***/
+body {
+	min-width: 320px;
+
+	font: var(--body-font);
+	color: var(--body-color);
+	background-color: var(--body-bg);
+}
+ul {
+	margin-bottom: 0;
+	padding-left: 0;
+}
+ul li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+button {
+	border: none;
+}
+input:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+input,
+textarea,
+select {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+::placeholder {
+	color: #777;
+	opacity: 1;
+}
+:focus::placeholder {
+	color: transparent;
+}
+::selection {
+	color: #fff;
+	background-color: var(--accent);
+}
+
+/*** Extra classes ***/
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.img-fluid {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
